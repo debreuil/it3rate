@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B9B0EA9-ECE6-4B11-9BA1-758F2CE2806D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDW</RootNamespace>
+    <AssemblyName>UILayoutTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\it3rate.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\FastBitmap.cs" />
+    <Compile Include="Commands\AddGuideCommand.cs" />
+    <Compile Include="Commands\AddInstancesCommand.cs" />
+    <Compile Include="Commands\AddItemsToLibraryCommand.cs" />
+    <Compile Include="Commands\AlignCommand.cs" />
+    <Compile Include="Commands\BreakApartCommand.cs" />
+    <Compile Include="Commands\CommandStack.cs" />
+    <Compile Include="Commands\ConstrainAspectCommand.cs" />
+    <Compile Include="Commands\DeleteInstancesCommand.cs" />
+    <Compile Include="Commands\DeleteItemsFromLibraryCommand.cs" />
+    <Compile Include="Commands\DuplicateSelectedCommand.cs" />
+    <Compile Include="Commands\EditInPlaceCommand.cs" />
+    <Compile Include="Commands\GroupCommand.cs" />
+    <Compile Include="Commands\ImportFileCommand.cs" />
+    <Compile Include="Commands\MoveGuideCommand.cs" />
+    <Compile Include="Commands\MoveSelectionCommand.cs" />
+    <Compile Include="Commands\RemoveBondsCommand.cs" />
+    <Compile Include="Commands\RemoveGuideCommand.cs" />
+    <Compile Include="Commands\RepeatCommand.cs" />
+    <Compile Include="Commands\TranslateRotationCenterCommand.cs" />
+    <Compile Include="Commands\NudgeSelectionCommand.cs" />
+    <Compile Include="Commands\RemoveTransformsCommand.cs" />
+    <Compile Include="Commands\RotateTransformCommand.cs" />
+    <Compile Include="Commands\ScaleTransformCommand.cs" />
+    <Compile Include="Commands\SelectInstancesCommand.cs" />
+    <Compile Include="Commands\SelectionToSymbolCommand.cs" />
+    <Compile Include="Commands\SwapDepthsCommand.cs" />
+    <Compile Include="Controls\BondStore.cs" />
+    <Compile Include="Controls\SnapStore.cs" />
+    <Compile Include="Data\CrossPoint.cs" />
+    <Compile Include="Data\CrossRange.cs" />
+    <Compile Include="Data\ICrossPoint.cs" />
+    <Compile Include="Interfaces\ILibraryTreeNode.cs" />
+    <Compile Include="Managers\CustomCursors.cs" />
+    <Compile Include="Controls\Guidelines.cs" />
+    <Compile Include="Tests\CommandTests.cs" />
+    <Compile Include="Tests\LibraryTests.cs" />
+    <Compile Include="Utils\UsageIdentifier.cs" />
+    <Compile Include="Views\FolderTreeNode.cs" />
+    <Compile Include="Interfaces\IEditableView.cs" />
+    <Compile Include="Views\It3rateAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\It3rateAbout.Designer.cs">
+      <DependentUpon>It3rateAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LibraryTreeNode.cs" />
+    <Compile Include="Controls\Rulers.cs" />
+    <Compile Include="Controls\TransformHandles.cs" />
+    <Compile Include="Display\DesignTimeline.cs" />
+    <Compile Include="Display\DesignInstance.cs" />
+    <Compile Include="Display\InstanceGroup.cs" />
+    <Compile Include="Display\LibraryItem.cs" />
+    <Compile Include="Enums\Align.cs" />
+    <Compile Include="Enums\ColorMask.cs" />
+    <Compile Include="Enums\DragKind.cs" />
+    <Compile Include="Enums\TransformKind.cs" />
+    <Compile Include="Gdi\GdiRenderer.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Interfaces\IRepeatableCommand.cs" />
+    <Compile Include="Interfaces\ISaveableCommand.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\BitmapCache.cs" />
+    <Compile Include="Managers\FontManager.cs" />
+    <Compile Include="Managers\InstanceManager.cs" />
+    <Compile Include="Managers\Library.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Render\GDIRender.cs" />
+    <Compile Include="Render\IRenderer.cs" />
+    <Compile Include="Views\LibraryTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\LibraryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LibraryView.Designer.cs">
+      <DependentUpon>LibraryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyBar.Designer.cs">
+      <DependentUpon>PropertyBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\It3rateAbout.resx">
+      <DependentUpon>It3rateAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LibraryView.resx">
+      <DependentUpon>LibraryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyBar.resx">
+      <DependentUpon>PropertyBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StageView.resx">
+      <DependentUpon>StageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\David Sans Condensed.ttf" />
+    <None Include="Resources\David Sans.ttf" />
+    <None Include="Resources\pf_ronda_seven.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SwfReader\SwfFormat.csproj">
+      <Project>{04BB0485-133C-4B56-94C0-D1D9B3D6EC95}</Project>
+      <Name>SwfFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VexDraw\VexDraw.csproj">
+      <Project>{241BC2DA-2699-4727-8395-A0E18EEDE42B}</Project>
+      <Name>VexDraw</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vex\Vex.csproj">
+      <Project>{9E0E5CBD-E7FC-4BD6-A9B0-DEEE4BA576C7}</Project>
+      <Name>Vex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VectorML\VectorML.csproj">
+      <Project>{D1DBCB1D-90CF-467F-A59D-010A97046580}</Project>
+      <Name>VectorML</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addSymbolCursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowCursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursors\arrowDup.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\buttons\update_d.png" />
+    <Content Include="Resources\buttons\update_n.png" />
+    <Content Include="Resources\buttons\update_o.png" />
+    <Content Include="Resources\cursors\arrowMove.cur" />
+    <Content Include="Resources\cursors\arrowMoveCenter.cur" />
+    <Content Include="Resources\cursors\hand.cur" />
+    <Content Include="Resources\cursors\handClosed.cur" />
+    <Content Include="Resources\cursors\moveAllDir.cur" />
+    <Content Include="Resources\cursors\rectSelect.cur" />
+    <Content Include="Resources\cursors\rotate.cur" />
+    <Content Include="Resources\cursors\stretchEW.cur" />
+    <Content Include="Resources\cursors\stretchNE_SW.cur" />
+    <Content Include="Resources\cursors\stretchNS.cur" />
+    <Content Include="Resources\cursors\stretchNW_SE.cur" />
+    <Content Include="Resources\cursors\zoomIn.cur" />
+    <Content Include="Resources\cursors\zoomNone.cur" />
+    <Content Include="Resources\cursors\zoomOut.cur" />
+    <Content Include="Resources\guideMarks\guideBoth.png" />
+    <Content Include="Resources\guideMarks\guideHorizontal.png" />
+    <Content Include="Resources\guideMarks\guidePoint.png" />
+    <Content Include="Resources\guideMarks\guideVertical.png" />
+    <Content Include="Resources\handles\handle_anchor.png" />
+    <Content Include="Resources\handles\handle_join.png" />
+    <Content Include="Resources\handles\handle_lock.png" />
+    <Content Include="Resources\handles\handle_magnet0.png" />
+    <Content Include="Resources\handles\handle_magnet1.png" />
+    <Content Include="Resources\handles\handle_magnet2.png" />
+    <Content Include="Resources\handles\handle_magnet3.png" />
+    <Content Include="Resources\handles\handle_pin.png" />
+    <Content Include="Resources\handles\handle_rotate.png" />
+    <Content Include="Resources\handles\handle_rotate0.png" />
+    <Content Include="Resources\handles\handle_rotate1.png" />
+    <Content Include="Resources\handles\handle_rotate2.png" />
+    <Content Include="Resources\handles\handle_rotate3.png" />
+    <Content Include="Resources\handles\handle_spring0.png" />
+    <Content Include="Resources\handles\handle_spring1.png" />
+    <Content Include="Resources\handles\handle_spring2.png" />
+    <Content Include="Resources\handles\handle_spring3.png" />
+    <Content Include="Resources\handles\handle_square.png" />
+    <Content Include="Resources\handles\handle_squareSmall.png" />
+    <Content Include="Resources\it3rate.ico" />
+    <Content Include="Resources\documentation\shortcutKeys.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\iterateAbout.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

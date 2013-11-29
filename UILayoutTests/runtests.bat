@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\NUnit 2.6\bin\nunit-x86.exe" /run
