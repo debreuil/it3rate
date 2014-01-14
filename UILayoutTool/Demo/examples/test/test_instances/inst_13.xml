@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Instance xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DefinitionId>13</DefinitionId>
+  <EndTime>0</EndTime>
+  <Depth>3</Depth>
+  <ParentDefinitionId>1</ParentDefinitionId>
+  <RotationCenter X="189" Y="84" />
+  <AspectConstraint>None</AspectConstraint>
+  <Transformations>
+    <Transform>
+      <EndTime>0</EndTime>
+      <Alpha>0</Alpha>
+      <Matrix Values="1,0,0,1,368,198" />
+    </Transform>
+  </Transformations>
+  <InstanceHash>13</InstanceHash>
+</Instance>

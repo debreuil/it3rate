@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Timeline xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Duration>83</Duration>
+  <FrameCount>1</FrameCount>
+  <Labels />
+  <Id>9</Id>
+  <Name>pick</Name>
+  <StrokeBounds X="2" Y="0" Width="57" Height="63" />
+  <Instances>5</Instances>
+</Timeline>

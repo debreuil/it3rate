@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Instance xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DefinitionId>1</DefinitionId>
+  <EndTime>0</EndTime>
+  <Depth>-1</Depth>
+  <RotationCenter X="388" Y="203.5" />
+  <AspectConstraint>None</AspectConstraint>
+  <Transformations>
+    <Transform>
+      <EndTime>0</EndTime>
+      <Alpha>0</Alpha>
+    </Transform>
+  </Transformations>
+  <InstanceHash>1</InstanceHash>
+</Instance>

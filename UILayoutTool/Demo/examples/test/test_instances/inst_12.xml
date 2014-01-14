@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Instance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DefinitionId>3</DefinitionId>
+  <EndTime>0</EndTime>
+  <Depth>2</Depth>
+  <Name>face1</Name>
+  <ParentDefinitionId>1</ParentDefinitionId>
+  <RotationCenter X="142.5" Y="156.5" />
+  <AspectConstraint>None</AspectConstraint>
+  <Transformations>
+    <Transform>
+      <EndTime>0</EndTime>
+      <Alpha>0</Alpha>
+      <Matrix Values="0.493,0,0,0.493,38.5,235.1965" />
+    </Transform>
+  </Transformations>
+  <InstanceHash>12</InstanceHash>
+</Instance>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Swf > It3rate > Canvas - Haxe test 2</title>
+	<meta charset="utf-8" />
+
+	<script type="text/javascript" src="testData.js"></script>
+	<script type="text/javascript" src="vexDrawHaxe.js"></script>
+
+	<style type="text/css">
+	canvas
+	{
+		display: block;
+		position: absolute;
+	}
+	</style>
+</head>
+
+<body onload="render()">
+
+Swf > It3rate > Canvas - Test
+
+<script type="text/javascript">
+
+var vo;
+function render()
+{
+	var useJson = false;
+	if(useJson)
+	{
+		vo = new ddw.VexObject();
+		vo.parseJson(data, drawVexObject);
+	}
+	else
+	{
+		vo = new ddw.VexObject();
+		vo.parseBinaryFile("testData.dat?tm=" + (new Date()).getTime(), drawVexObject);
+	}
+	//vo.drawColorTables();
+	//vo.drawTimeline(1);
+
+
+}
+function drawVexObject()
+{
+	vo.drawTimeline(1);
+
+	//vo.drawTimelineByName("face");
+
+	//vo.drawColorTables();
+	//var c = new ddw.Color(0xFFFF0000);
+	//var f = new ddw.SolidFill(c);
+	//vo.fills[5] = f;
+}
+
+</script>
+
+</body>
+</html>

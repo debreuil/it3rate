@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Symbol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Bounds X="-39.85" Y="0" Width="45.2" Height="45.5" />
+  <Shapes>
+    <Shape>
+      <SolidFill Color="#FF009900" />
+      <EncodedShapeData>L-39.85,34.6,-18.1,45.5 L-18.1,45.5,-5.75,31.9 L-5.75,31.9,2.7,36.05 L2.7,36.05,4.45,36.05 L4.45,36.05,5.35,28.6 L5.35,28.6,0.3,0 L0.3,0,-37.75,7.4 L-37.75,7.4,-38.7,15.35 L-38.7,15.35,-33.4,18.1 L-33.4,18.1,-39.55,26.15 L-39.55,26.15,-39.85,34.6 L-37.85,27.45,-37.65,27.55 L-37.65,27.55,-37.65,27.45 L-37.65,27.45,-29.95,17.3 L-29.95,17.3,-30.1,17.25 L-30.1,17.25,-30.2,17.4 L-30.2,17.4,-36.05,14.3 L-36.05,14.3,-36.35,14.1 L-36.35,14.1,-35.6,8.95 L-35.6,8.95,-35.4,9.05 L-35.4,9.05,-1.35,2.6 L-1.35,2.6,2.8,28.3 L2.8,28.3,2.75,28.3 L2.75,28.3,2.2,33.3 L2.2,33.3,-6.1,28.95 L-6.1,28.95,-18.15,42.35 L-18.15,42.35,-18.35,42.5 L-18.35,42.5,-25.8,38.7 L-25.8,38.7,-37.7,33.05 L-37.7,33.05,-37.85,27.45 </EncodedShapeData>
+    </Shape>
+    <Shape>
+      <SolidFill Color="#FFD3FF99" />
+      <EncodedShapeData>L-37.65,27.45,-29.95,17.3 L-29.95,17.3,-30.1,17.25 L-30.1,17.25,-27.35,13.25 L-27.35,13.25,-35.4,9.05 L-35.4,9.05,-1.35,2.6 L-1.35,2.6,2.8,28.3 L2.8,28.3,2.75,28.3 L2.75,28.3,-7.1,24.2 L-7.1,24.2,-18.65,37 L-18.65,37,-18.15,42.35 L-18.15,42.35,-18.35,42.5 L-18.35,42.5,-25.8,38.7 L-25.8,38.7,-19.15,41.85 L-19.15,41.85,-19.95,36.15 L-19.95,36.15,-37.65,27.55 L-37.65,27.55,-37.65,27.45 L-35.85,27.35,-19.5,35.3 L-19.5,35.3,-7.95,22.5 L-7.95,22.5,1.65,27.1 L1.65,27.1,-2.25,4.05 L-2.25,4.05,-33.85,9.85 L-33.85,9.85,-25.8,14.05 L-25.8,14.05,-35.85,27.35 </EncodedShapeData>
+    </Shape>
+    <Shape>
+      <GradientFill>
+        <Fills>
+          <Color Value="#FF27C400" />
+          <Color Value="#FFC7FF87" />
+        </Fills>
+        <Stops>
+          <float>0</float>
+          <float>0.392156869</float>
+        </Stops>
+        <GradientType>Linear</GradientType>
+        <Transform Values="-0.0676,-0.03,0.0301,-0.0674,-48.7,2.75" />
+        <TagId>0</TagId>
+      </GradientFill>
+      <EncodedShapeData>L-35.85,27.35,-19.5,35.3 L-19.5,35.3,-7.95,22.5 L-7.95,22.5,1.65,27.1 L1.65,27.1,-2.25,4.05 L-2.25,4.05,-33.85,9.85 L-33.85,9.85,-25.8,14.05 L-25.8,14.05,-35.85,27.35 </EncodedShapeData>
+    </Shape>
+    <Shape>
+      <GradientFill>
+        <Fills>
+          <Color Value="#FF48B300" />
+          <Color Value="#FF56BB0D" />
+          <Color Value="#FFBBF769" />
+          <Color Value="#FFC8FF75" />
+        </Fills>
+        <Stops>
+          <float>0</float>
+          <float>0.1254902</float>
+          <float>0.227450982</float>
+          <float>0.392156869</float>
+        </Stops>
+        <GradientType>Linear</GradientType>
+        <Transform Values="-0.0448,0.0227,-0.0228,-0.0446,-29.6,46.45" />
+        <TagId>0</TagId>
+      </GradientFill>
+      <EncodedShapeData>L-18.65,37,-18.15,42.35 L-18.15,42.35,-6.1,28.95 L-6.1,28.95,2.2,33.3 L2.2,33.3,2.75,28.3 L2.75,28.3,-7.1,24.2 L-7.1,24.2,-18.65,37 </EncodedShapeData>
+    </Shape>
+    <Shape>
+      <GradientFill>
+        <Fills>
+          <Color Value="#FFCEFF85" />
+          <Color Value="#FF31C400" />
+        </Fills>
+        <Stops>
+          <float>0</float>
+          <float>0.392156869</float>
+        </Stops>
+        <GradientType>Linear</GradientType>
+        <Transform Values="-0.0345,-0.0232,0.0233,-0.0344,-45.5,23.3" />
+        <TagId>0</TagId>
+      </GradientFill>
+      <EncodedShapeData>L-37.85,27.45,-37.65,27.55 L-37.65,27.55,-19.95,36.15 L-19.95,36.15,-19.15,41.85 L-19.15,41.85,-25.8,38.7 L-25.8,38.7,-37.7,33.05 L-37.7,33.05,-37.85,27.45 </EncodedShapeData>
+    </Shape>
+    <Shape>
+      <GradientFill>
+        <Fills>
+          <Color Value="#FF3CD400" />
+          <Color Value="#FFADFF61" />
+        </Fills>
+        <Stops>
+          <float>0</float>
+          <float>0.392156869</float>
+        </Stops>
+        <GradientType>Linear</GradientType>
+        <Transform Values="-0.0136,-0.0114,0.0114,-0.0135,-39.3,7.75" />
+        <TagId>0</TagId>
+      </GradientFill>
+      <EncodedShapeData>L-36.35,14.1,-35.6,8.95 L-35.6,8.95,-35.4,9.05 L-35.4,9.05,-27.35,13.25 L-27.35,13.25,-30.1,17.25 L-30.1,17.25,-30.2,17.4 L-30.2,17.4,-36.05,14.3 L-36.05,14.3,-36.35,14.1 </EncodedShapeData>
+    </Shape>
+  </Shapes>
+  <Id>11</Id>
+  <StrokeBounds X="-39.85" Y="0" Width="45.2" Height="45.5" />
+</Symbol>

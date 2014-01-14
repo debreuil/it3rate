@@ -1,0 +1,19 @@
+﻿<Library>
+  <LibraryIdCounter>25</LibraryIdCounter>
+  <LibraryItems>
+    <Item Id="1" Type="DDW.Vex.Timeline" Date="2012-10-06 11:26:48Z" Name="$mc1" DataPath="tl_1.xml" />
+    <Item Id="2" Type="DDW.Vex.Symbol" Date="2012-10-06 06:55:04Z" OriginalSourceId="1" LibraryPath="fireman.swf" DataPath="sym_2.xml" />
+    <Item Id="3" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="2" Name="face" LibraryPath="fireman.swf" DataPath="tl_3.xml" />
+    <Item Id="4" Type="DDW.Vex.Symbol" Date="2012-10-06 06:55:04Z" OriginalSourceId="3" LibraryPath="fireman.swf" DataPath="sym_4.xml" />
+    <Item Id="5" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="4" Name="firemanSymbol" LibraryPath="fireman.swf" DataPath="tl_5.xml" />
+    <Item Id="6" Type="DDW.Vex.Symbol" Date="2012-10-06 06:55:04Z" OriginalSourceId="5" LibraryPath="fireman.swf" DataPath="sym_6.xml" />
+    <Item Id="7" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="6" Name="hex" LibraryPath="fireman.swf" DataPath="tl_7.xml" />
+    <Item Id="8" Type="DDW.Vex.Symbol" Date="2012-10-06 06:55:04Z" OriginalSourceId="7" LibraryPath="fireman.swf" DataPath="sym_8.xml" />
+    <Item Id="9" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="8" Name="pick" LibraryPath="fireman.swf" DataPath="tl_9.xml" />
+    <Item Id="10" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="9" Name="tripod" LibraryPath="fireman.swf" DataPath="tl_10.xml" />
+    <Item Id="11" Type="DDW.Vex.Symbol" Date="2012-10-06 06:55:04Z" OriginalSourceId="10" LibraryPath="fireman.swf" DataPath="sym_11.xml" />
+    <Item Id="12" Type="DDW.Vex.Timeline" Date="2012-10-06 06:55:04Z" OriginalSourceId="11" Name="arrow" LibraryPath="fireman.swf" DataPath="tl_12.xml" />
+    <Item Id="13" Type="DDW.Vex.Image" Date="2013-04-15 03:01:46Z" Name="car.png" DataPath="img_13.xml" />
+    <Item Id="24" Type="DDW.Vex.Image" Date="2010-10-26 03:25:49Z" Name="icon64.png" DataPath="img_24.xml" />
+  </LibraryItems>
+</Library>

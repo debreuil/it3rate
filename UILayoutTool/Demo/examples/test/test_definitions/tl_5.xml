@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Timeline xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Duration>83</Duration>
+  <FrameCount>1</FrameCount>
+  <Labels />
+  <Id>5</Id>
+  <Name>firemanSymbol</Name>
+  <StrokeBounds X="-66" Y="-45.95" Width="73" Height="95.2" />
+  <Instances>3</Instances>
+</Timeline>
