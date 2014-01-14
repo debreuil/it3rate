@@ -10,6 +10,7 @@ using DDW.Commands;
 using DDW.Views;
 using DDW.Vex;
 using DDW;
+using DDW.Vex.Bonds;
 
 [assembly: RequiresSTA]
 
@@ -68,6 +69,16 @@ namespace UILayoutTests
             Assert.AreEqual(4, dl.Selected.Count);
             commandStack.Redo();
             Assert.AreEqual(0, dl.Selected.Count);
+        }
+
+        [Test]
+        public void GuideTests()
+        {
+            Guide guide1 = new Guide(new DDW.Vex.Point(20, 100), new DDW.Vex.Point(480, 100));
+            Guide guide2 = new Guide(new DDW.Vex.Point(10, 10), new DDW.Vex.Point(400, 400));
+            //AddGuideCommand agc = new AddGuideCommand(guide);
+            MainForm.CurrentStage.AddGuide(guide1);
+            MainForm.CurrentStage.AddGuide(guide2);
         }
     }
 }
