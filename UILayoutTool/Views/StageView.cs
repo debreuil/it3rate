@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using System.Linq;
 using DDW.Assets;
 using DDW.Display;
-using WeifenLuo.WinFormsUI.Docking;
 using System.Collections.Generic;
 using DDW.Interfaces;
 using DDW.Commands;
@@ -27,7 +26,7 @@ using DDW.Data;
 
 namespace DDW.Views
 {
-    public class StageView : DockContent, IEditableView
+    public class StageView : Form, IEditableView
     {
         bool dragInCursor = false;
 

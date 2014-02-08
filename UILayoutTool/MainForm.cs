@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DDW.Views;
-using WeifenLuo.WinFormsUI.Docking;
 using DDW.Commands;
 using DDW.Display;
 using System.IO;
@@ -48,17 +47,27 @@ namespace DDW
             InitializeComponent();
 
             propertyBar = new PropertyBar();
-            propertyBar.Show(dockPanel, propertyBarDocState);
-            propertyBar.DockHandler.DockAreas = DockAreas.DockBottom;
-            propertyBar.DockHandler.AutoHideButtonVisible = false;
-            propertyBar.DockHandler.HideOnClose = true;
-                        
-            currentLibraryView = LibraryView.Instance;
-            currentLibraryView.Show(dockPanel, libraryDocState);
-            currentLibraryView.DockHandler.HideOnClose = true;
+            propertyBar.Dock = DockStyle.Bottom;
+            propertyBar.TopLevel = false;
+            inst.Controls.Add(propertyBar);
+            propertyBar.Show();
 
-            dockPanel.UpdateDockWindowZOrder(DockStyle.Right, true);
-            dockPanel.UpdateDockWindowZOrder(DockStyle.Bottom, false);
+            //propertyBar.Show(dockPanel, propertyBarDocState);
+            //propertyBar.DockHandler.DockAreas = DockAreas.DockBottom;
+            //propertyBar.DockHandler.AutoHideButtonVisible = false;
+            //propertyBar.DockHandler.HideOnClose = true;
+
+            currentLibraryView = LibraryView.Instance;
+            currentLibraryView.Dock = DockStyle.Right;
+            currentLibraryView.TopLevel = false;
+            inst.Controls.Add(currentLibraryView);
+            currentLibraryView.Show();
+
+            //currentLibraryView.Show(dockPanel, libraryDocState);
+            //currentLibraryView.DockHandler.HideOnClose = true;
+
+            //dockPanel.UpdateDockWindowZOrder(DockStyle.Right, true);
+            //dockPanel.UpdateDockWindowZOrder(DockStyle.Bottom, false);
 
             this.DoubleBuffered = true;
             this.AddEvents();
@@ -142,7 +151,12 @@ namespace DDW
                 currentStage = sv;
                 currentLibraryView.LoadCurrentLibrary();
 
-                sv.Show(dockPanel);
+                currentStage.TopLevel = false;
+                currentStage.Dock = DockStyle.Fill;
+                inst.Controls.Add(currentStage);
+                currentStage.Show();
+
+                //sv.Show(dockPanel);
 
                 currentStage.OnSelectionChanged += OnSelectionChanged;
                 currentStage.OnUndoStackChanged += OnUndoStackChanged;
@@ -439,32 +453,34 @@ namespace DDW
             currentStage.UseSmartBonds = !currentStage.UseSmartBonds;
         }
 
-        private DockState libraryDocState = DockState.DockRight;
+        //private DockState libraryDocState = DockState.DockRight;
         public void ShowLibraryView(object sender, EventArgs e)
         {
             if (currentLibraryView.Visible)
             {
-                libraryDocState = currentLibraryView.DockState;
+                //libraryDocState = currentLibraryView.DockState;
                 currentLibraryView.Hide();
             }
             else
             {
-                currentLibraryView.Show(dockPanel, libraryDocState);
+                //currentLibraryView.Show(dockPanel, libraryDocState);
+                currentLibraryView.Show();
             }
             //currentLibraryView.Visible = !currentLibraryView.Visible;
         }
 
-        private DockState propertyBarDocState = DockState.DockBottom;
+        //private DockState propertyBarDocState = DockState.DockBottom;
         public void ShowPropertyBar(object sender, EventArgs e)
         {
             if (propertyBar.Visible)
             {
-                propertyBarDocState = propertyBar.DockState;
+                //propertyBarDocState = propertyBar.DockState;
                 propertyBar.Hide();
             }
             else
             {
-                propertyBar.Show(dockPanel, propertyBarDocState);
+                //propertyBar.Show(dockPanel, propertyBarDocState);
+                propertyBar.Show();
             }
         }
 

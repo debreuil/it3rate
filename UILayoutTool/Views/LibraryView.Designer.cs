@@ -83,6 +83,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(200, 200);
             this.Name = "LibraryView";
             this.Text = "LibraryView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

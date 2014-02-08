@@ -4,7 +4,6 @@ using System.IO;
 using System.Windows.Forms;
 using DDW.Display;
 using DDW.Managers;
-using WeifenLuo.WinFormsUI.Docking;
 using DDW.Swf;
 using Vex = DDW.Vex;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ using DDW.Utils;
 
 namespace DDW.Views
 {
-    public partial class LibraryView : DockContent, IEditableView
+    public partial class LibraryView : Form, IEditableView
     {
         private static LibraryView instance;
         public static LibraryView Instance { get { if (instance == null) instance = new LibraryView(); return instance; } }

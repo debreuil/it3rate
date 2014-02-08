@@ -6,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using WeifenLuo.WinFormsUI.Docking;
 using DDW.Display;
 using DDW.Managers;
 using DDW.Utils;
@@ -16,7 +15,7 @@ using DDW.Interfaces;
 
 namespace DDW.Views
 {
-    public partial class PropertyBar : DockContent, IEditableView
+    public partial class PropertyBar : Form, IEditableView
     {
         private float originalValue;
         private float newValue;

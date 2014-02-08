@@ -207,10 +207,6 @@
       <Project>{9E0E5CBD-E7FC-4BD6-A9B0-DEEE4BA576C7}</Project>
       <Name>Vex</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
-      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
-      <Name>WinFormsUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VectorML\VectorML.csproj">
       <Project>{D1DBCB1D-90CF-467F-A59D-010A97046580}</Project>
       <Name>VectorML</Name>
