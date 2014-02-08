@@ -22,7 +22,7 @@ namespace DDW
 {
     public partial class MainForm : Form
     {
-        private string testFile = @"examples\test\test.uil";
+		private string testFile = @"..//..//Demo//examples//test//test.uil";
         private static MainForm inst;
         public static MainForm Instance { get { return inst; } }
 
@@ -72,9 +72,11 @@ namespace DDW
             this.DoubleBuffered = true;
             this.AddEvents();
 #if DEBUG
+			string fullPath = Path.GetFullPath(testFile);
+			Console.WriteLine(Directory.GetCurrentDirectory());
+			Console.WriteLine(fullPath);
             if (File.Exists(testFile))
             {
-                string fullPath = Path.GetFullPath(testFile);
                 CreateNewStage(Path.GetFileNameWithoutExtension(fullPath));
                 currentStage.LoadUIL(fullPath);
                 currentLibraryView.SelectFirstNode();

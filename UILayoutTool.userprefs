@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UILayoutTool/MainForm.cs">
+    <Files>
+      <File FileName="UILayoutTool/MainForm.cs" Line="10" Column="7" />
+      <File FileName="UILayoutTool/MainForm.Designer.cs" Line="1" Column="1" />
+      <File FileName="UILayoutTool/MainForm.resx" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Projects/Iterate/it3rate/UILayoutTool/MainForm.cs" line="48" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
