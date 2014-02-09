@@ -11,13 +11,14 @@ using System.IO;
 using DDW.Display;
 using Vex = DDW.Vex;
 using DDW.Interfaces;
+using System.Runtime.Serialization;
 
 namespace DDW.Views
 {
-    public partial class LibraryTreeNode : TreeNode, ILibraryTreeNode, IDataObject
+	public partial class LibraryTreeNode : TreeNode, ILibraryTreeNode, IDataObject
     {
-        public LibraryItem item { get; set; }
-
+		public LibraryItem item { get; set; }
+		public LibraryItem[] Items{ get { return new LibraryItem[]{ item }; } }
         public string DisplayName { get { return Path.GetFileNameWithoutExtension(item.Path); } }
         public Type ContentsType { get { return item.GetType(); } }
         public DateTime Date { get { return item.Date; } set { item.Date = value; } }

@@ -11,7 +11,8 @@ using System.IO;
 namespace DDW.Views
 {
     class FolderTreeNode : TreeNode, ILibraryTreeNode, IDataObject
-    {
+	{
+		public LibraryItem[] Items{ get { return new LibraryItem[]{ }; } }
         public string DisplayName { get; set; }
         public Type ContentsType { get; set; }
         public DateTime Date { get; set; }

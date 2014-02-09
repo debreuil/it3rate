@@ -41,13 +41,19 @@ namespace DDW
 
         public ImageList ElementIcons { get { return elementIcons; } }
 
+		private Panel dockPanel;
+
         public MainForm()
         {
             inst = this;
             InitializeComponent();
 
+//			dockPanel = new Panel ();
+//			dockPanel.Dock = DockStyle.Fill;
+//			dockPanel.is
+
             propertyBar = new PropertyBar();
-            propertyBar.Dock = DockStyle.Bottom;
+			propertyBar.Dock = DockStyle.Bottom;
             propertyBar.TopLevel = false;
             inst.Controls.Add(propertyBar);
             propertyBar.Show();
@@ -58,10 +64,10 @@ namespace DDW
             //propertyBar.DockHandler.HideOnClose = true;
 
             currentLibraryView = LibraryView.Instance;
-            currentLibraryView.Dock = DockStyle.Right;
+			currentLibraryView.Dock = DockStyle.Right;
             currentLibraryView.TopLevel = false;
             inst.Controls.Add(currentLibraryView);
-            currentLibraryView.Show();
+			currentLibraryView.Show();
 
             //currentLibraryView.Show(dockPanel, libraryDocState);
             //currentLibraryView.DockHandler.HideOnClose = true;

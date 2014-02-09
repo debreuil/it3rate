@@ -208,7 +208,8 @@ namespace DDW.Views
         {
             if (selectedItem != null)
             {
-                symbolTree.DoDragDrop(selectedItem, DragDropEffects.Link);
+				LibraryItemDragPacket packet = new LibraryItemDragPacket (selectedItem.Items);
+				symbolTree.DoDragDrop(packet, DragDropEffects.Link);
             }
         }
         void symbolTree_GiveFeedback(object sender, GiveFeedbackEventArgs e)

@@ -2088,6 +2088,7 @@ namespace DDW.Views
         void StageView_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
         {
             string[] formats = e.Data.GetFormats();
+			IDataObject dobj = e.Data;
             if (dragInCursor && e.Data.GetDataPresent(InstanceGroup.formatName))
             {
                 e.Effect = DragDropEffects.Move;
@@ -2101,17 +2102,21 @@ namespace DDW.Views
                 Bitmap img = ig.GetOutline();
                 AddDragImageToCursor(img, localCenter.SysPoint());
                 img.Dispose(); // non raw elements are never cached
-            }
-            else if (e.Data.GetDataPresent(LibraryItem.formatName))
-            {
-                e.Effect = DragDropEffects.Link;
-                LibraryItem li = (LibraryItem)e.Data.GetData(LibraryItem.formatName);
-                Vex.Size sz = li.Size;
+			}
+			else if (e.Data.GetDataPresent(LibraryItemDragPacket.formatName))
+			{
+				e.Effect = DragDropEffects.Link;
+				LibraryItemDragPacket lidp = (LibraryItemDragPacket)e.Data.GetData(LibraryItemDragPacket.formatName);
+				if (lidp.Items != null && lidp.Items.Length > 0) 
+				{
+					LibraryItem li = lidp.Items [0];
+					Vex.Size sz = li.Size;
 
-                Bitmap img = li.GetScaledImage(cameraMatrix);
-                Point center = new Point((int)(img.Width / 2.0), (int)(img.Height / 2.0));
-                AddDragImageToCursor(img, center);
-            }
+					Bitmap img = li.GetScaledImage (cameraMatrix);
+					Point center = new Point ((int)(img.Width / 2.0), (int)(img.Height / 2.0));
+					AddDragImageToCursor (img, center);
+				}
+			}
             else if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 bool hif = Library.HasImportableFile((string[])e.Data.GetData(DataFormats.FileDrop));
@@ -2151,29 +2156,31 @@ namespace DDW.Views
 
                 InvalidateSelectionOffset(diff.Negate().SysPoint());
                 InvalidateSelection();
-            }
-            else if (e.Data.GetDataPresent(LibraryItem.formatName))
-            {
-                // new element from library
-                LibraryItem li = (LibraryItem)e.Data.GetData(LibraryItem.formatName, false);
-                if (designStage.CanAdd(li))
-                {
-                    Point dropLoc = ((Control)sender).PointToClient(new Point(e.X, e.Y));
-                    PointF tDropLoc = CameraToStage(dropLoc);
+			}
+			else if (e.Data.GetDataPresent(LibraryItemDragPacket.formatName))
+			{
+				e.Effect = DragDropEffects.Link;
+				LibraryItemDragPacket lidp = (LibraryItemDragPacket)e.Data.GetData(LibraryItemDragPacket.formatName);
+				if (lidp.Items != null && lidp.Items.Length > 0) 
+				{
+					// new element from library
+					LibraryItem li = lidp.Items[0];
+					if (designStage.CanAdd (li)) {
+						Point dropLoc = ((Control)sender).PointToClient (new Point (e.X, e.Y));
+						PointF tDropLoc = CameraToStage (dropLoc);
 
-                    // center it
-                    Vex.Rectangle sb = li.Definition.StrokeBounds;
-                    Vex.Point final = new Vex.Point(tDropLoc.X - sb.Width / 2 - sb.Left, tDropLoc.Y - sb.Height / 2 - sb.Top);
+						// center it
+						Vex.Rectangle sb = li.Definition.StrokeBounds;
+						Vex.Point final = new Vex.Point (tDropLoc.X - sb.Width / 2 - sb.Left, tDropLoc.Y - sb.Height / 2 - sb.Top);
 
-                    CommandStack.Do(new AddInstancesCommand(new uint[] { li.DefinitionId }, new Vex.Point[] { final }));
-                    wasTransformed = true;
-                    InvalidateSelection();
-                }
-                else
-                {
-                    StopDrag();
-                    MessageBox.Show("        Can not add a symbol to itself.", "UI Layout Tool");
-                }
+						CommandStack.Do (new AddInstancesCommand (new uint[] { li.DefinitionId }, new Vex.Point[] { final }));
+						wasTransformed = true;
+						InvalidateSelection ();
+					} else {
+						StopDrag ();
+						MessageBox.Show ("        Can not add a symbol to itself.", "UI Layout Tool");
+					}
+				}
             }
             else if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {

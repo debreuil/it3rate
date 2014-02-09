@@ -9,6 +9,7 @@ namespace DDW.Interfaces
 {
     public interface ILibraryTreeNode : IDataObject
     {
+		DDW.Display.LibraryItem[] Items{ get; }
         string DisplayName { get;}
         Type ContentsType { get; }
         DateTime Date { get; set; }

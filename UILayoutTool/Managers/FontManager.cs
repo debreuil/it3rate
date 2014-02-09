@@ -23,10 +23,9 @@ namespace DDW.Managers
 
         static FontManager()
         {
-            LoadFont(Properties.Resources.pf_ronda_seven);
-            //LoadFont(Properties.Resources.David_Sans);
-            //LoadFont(Properties.Resources.David_Sans_Condensed);
-            RulerFont = new Font(fonts.Families[0], 6); 
+//          LoadFont(Properties.Resources.pf_ronda_seven);
+//			RulerFont = new Font(fonts.Families[0], 6); 
+			RulerFont = SystemFonts.SmallCaptionFont;
         }
 
         private static void LoadFont(byte[] res)
@@ -45,7 +44,7 @@ namespace DDW.Managers
             }
             catch
             {
-
+				Console.WriteLine ("Font unable to load."); 
             }
         }
 
